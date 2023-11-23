@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tecart Submission</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceberg&family=Metal+Mania&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      font-family: "Roboto Mono", monospace;
+      @apply text-white;
+    }
+
+    .title {
+      font-family: "Metal Mania", cursive;
+    }
+
+    .description {
+      font-family: "Iceberg", cursive;
+    }
+
+    .list {
+      font-family: "Roboto Mono", monospace;
+      font-weight: 600;
+    }
+  </style>
+  <body class="min-h-screen flex w-full bg-[rgb(4,26,53)] overflow-hidden">
+    <section class="w-[65vw] min-h-screen">
+      <img
+        src="./img/half-background.jpeg"
+        class="w-full h-full object-cover"
+        alt=""
+      />
+    </section>
+    <section class="relative">
+      <div
+        class="absolute top-[7vh] w-[500px] -left-[130px] bg-[rgb(4,26,53)] z-[99] border border-2 border-[rgb(175,207,218)] py-14 px-7"
+      >
+        <h1 class="title text-4xl text-center mb-6">TECART INSIDER</h1>
+        <p class="description text-center">
+          We are organization based on Udayana University, we share our
+          perspective about the world to student in ennginering faculty.
+        </p>
+        <div>
+          <div class="flex gap-6 items-center mt-6">
+            <div
+              class="w-7 h-7 max-w-7 max-h-7 rounded-full bg-white flex items-center justify-center"
+            >
+              <img src="./img/check.png" class="w-[18px]" alt="" />
+            </div>
+            <p class="list text-xs w-[400px]">
+              Mainly talk about programming, ui/ux, networking, business
+              intelligent.
+            </p>
+          </div>
+          <div class="flex items-center gap-6 mt-6">
+            <div
+              class="min-w-7 min-h-7 w-7 h-7 rounded-full bg-white flex items-center justify-center"
+            >
+              <img src="./img/check.png" class="w-[18px]" alt="" />
+            </div>
+            <p class="list text-xs">
+              Analyzing with AI , with comprehensive algorithm
+            </p>
+          </div>
+            <div class="flex items-center mt-6 gap-6">
+                <div
+                class="min-w-7 min-h-7 w-7 h-7 rounded-full bg-white flex items-center justify-center "
+                >
+                <img src="./img/check.png" class="w-[18px]" alt="" />
+                </div>
+                <p class="list text-xs">
+                And many more !!!
+                </p>
+                </div> 
+        </div>
+        <form action="" class="mt-8 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+                <label for="email" class="text-xs">Email Address :</label>
+                <p class="text-xs text-red-400 hidden">
+                    Valid email required!
+                </p>
+            </div>
+          <input type="email" class="input bg-[#afcfda] text-black"/>
+          <button class="btn btn-primary bg-[#2777c2]">Subscribe to Monthly Newsletter</button>
+        </form>
+      </div>
+    </section>
+    <script>
+        const email = document.querySelector('input[type="email"]');
+        const form = document.querySelector('form');
+        const error = document.querySelector('.text-red-400');
+        const btn = document.querySelector('button');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if(email.value === '') {
+                error.classList.remove('hidden');
+            } else {
+                form.innerHTML = `<p class="uppercase description text-white text-center text-2xl">Thanks for subscribe</p>`
+            }
+        })
+
+    </script>
+  </body>
+</html>
